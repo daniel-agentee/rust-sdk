@@ -3,7 +3,7 @@ use crate::schema::{
     ListSessionsRequest, ListSessionsResponse, LoadSessionRequest, LoadSessionResponse,
     NewSessionRequest, NewSessionResponse, PromptRequest, PromptResponse,
     SetSessionConfigOptionRequest, SetSessionConfigOptionResponse, SetSessionModeRequest,
-    SetSessionModeResponse,
+    SetSessionModeResponse, SetSessionTitleRequest, SetSessionTitleResponse,
 };
 #[cfg(feature = "unstable_session_close")]
 use crate::schema::{CloseSessionRequest, CloseSessionResponse};
@@ -28,6 +28,11 @@ impl_jsonrpc_request!(
     SetSessionModeRequest,
     SetSessionModeResponse,
     "session/set_mode"
+);
+impl_jsonrpc_request!(
+    SetSessionTitleRequest,
+    SetSessionTitleResponse,
+    "session/setTitle"
 );
 impl_jsonrpc_request!(
     SetSessionConfigOptionRequest,

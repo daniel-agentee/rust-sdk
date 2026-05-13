@@ -35,7 +35,8 @@ tokio = { version = "1.48", features = ["full"] }
 tokio-util = { version = "0.7", features = ["compat"] }
 
 # Protocol
-agent-client-protocol-schema = { version = "=0.12.0", features = ["tracing"] }
+# Temporary local override until `session/setTitle` is released in the schema crate.
+agent-client-protocol-schema = { version = "=0.12.2", path = "../agent-client-protocol", features = ["tracing"] }
 
 # Serialization
 serde = { version = "1.0", features = ["derive", "rc"] }
