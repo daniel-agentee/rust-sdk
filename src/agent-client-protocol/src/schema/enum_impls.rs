@@ -21,6 +21,7 @@ impl_jsonrpc_request_enum!(ClientRequest {
     CloseSessionRequest => "session/close",
     SetSessionModeRequest => "session/set_mode",
     SetSessionConfigOptionRequest => "session/set_config_option",
+    SetSessionTitleRequest => "session/setTitle",
     PromptRequest => "session/prompt",
     #[cfg(feature = "unstable_session_model")]
     SetSessionModelRequest => "session/set_model",
